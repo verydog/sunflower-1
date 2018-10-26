@@ -1,4 +1,4 @@
-# sunflower
+# sunflower 🌼
 
 ## Project setup
 ```

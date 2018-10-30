@@ -15,4 +15,4 @@
 ▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 10%
 
 ## LICENSE
-<a href="https://github.com/ElemeFE/element/blob/dev/LICENSE">MIT</a>
+MIT

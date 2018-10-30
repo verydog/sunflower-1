@@ -13,7 +13,15 @@ export default new Router({
     {
       path: '/components',
       name: 'components',
-      component: () => import('./views/components.vue')
+      component: () => import('./views/components.vue'),
+      redirect: '/components/quickstart',
+      children: [
+        {
+          path: 'quickstart',
+          name: 'components-quickstart',
+          component: () => import('./views/comp/quickstart.vue')
+        }
+      ]
     }
   ]
 })

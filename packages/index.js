@@ -1,10 +1,12 @@
 import SunSwiperLayoutItem from './sun-swiper-layout-item'
 import SunSwiperLayout from './sun-swiper-layout'
+import SunMarkdown from './sun-markdown'
 
 
 const components = [
   SunSwiperLayoutItem,
-  SunSwiperLayout
+  SunSwiperLayout,
+  SunMarkdown
 ]
 
 const install = function(Vue) {
@@ -22,6 +24,7 @@ export {
   version,
   SunSwiperLayoutItem,
   SunSwiperLayout,
+  SunMarkdown
 }
 
 export default {

@@ -4,7 +4,6 @@ import router from './router'
 
 import Sunflower from '../packages/index'
 
-
 Vue.use(Sunflower)
 
 Vue.config.productionTip = false

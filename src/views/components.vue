@@ -15,10 +15,7 @@
             <div class="nav-list-content">
               <ul>
                 <li class="item">
-                  <router-link to="component/install">安装</router-link>
-                </li>
-                <li class="item">
-                  <router-link to="component/install">快速上手</router-link>
+                  <router-link to="components/quickstart">快速上手</router-link>
                 </li>
               </ul>
             </div>
@@ -31,10 +28,10 @@
             <div class="nav-list-content">
               <ul>
                 <li class="item">
-                  <router-link to="component/install">SwiperLayout 滑块列表</router-link>
+                  <router-link to="components/quickstart">SwiperLayout 滑块列表</router-link>
                 </li>
                 <li class="item">
-                  <router-link to="component/install">IBoot 木桶布局</router-link>
+                  <router-link to="components/install">IBoot 木桶布局</router-link>
                 </li>
               </ul>
             </div>
@@ -43,50 +40,7 @@
         </div>
 
         <div class="content-box nui-scroll">
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
-          <h1>xxxxxxx</h1>
+          <router-view/>
         </div>
 
       </div>
@@ -134,7 +88,7 @@ export default {
         font-weight: 400;
         transition: .15s ease-out;
         &:hover {
-          color: #409eff;
+          color: orange;
         }
       }
       margin-bottom: 10px;
@@ -153,7 +107,7 @@ export default {
     }
 
     .content-box {
-      padding-top: $topPadding;
+      padding-top: $topPadding + 20px;
     }
 
     .sponsors {

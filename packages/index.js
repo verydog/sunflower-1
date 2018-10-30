@@ -15,8 +15,16 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
+const version = '1.0.0'
+
 export {
   install,
+  version,
   SunSwiperLayoutItem,
-  SunSwiperLayout
+  SunSwiperLayout,
 }
+
+export default {
+  install,
+  version
+};

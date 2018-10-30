@@ -1,26 +1,10 @@
 # sunflower 🌼
 
-## Project setup
-```
-npm install
-```
+【开发中】vue 2.0 高阶需求ui组件库.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Development progress
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+* SunSwiperLayout ✅
+* SunSwiperLayoutItem ✅
+* SunMarkdown ✅
+* SunBoot ⚪

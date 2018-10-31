@@ -1,6 +1,6 @@
 <template>
-  <div class="sun-markdown">
-    <div v-html="getMarkdown" v-if="mode === 'vue'"></div>
+  <div class="sun-markdown markdown-body">
+    <div v-html="getMarkdown" v-if="mode === 'vue'" ref="vdom"></div>
     <div v-if="mode === 'dom'" ref="dom">
       <slot></slot>
     </div>
@@ -9,6 +9,10 @@
 
 <script>
   import marked from 'marked'
+  import hljs from 'highlight.js';
+  import 'highlight.js/styles/github.css'
+
+
   export default {
     name: "sun-markdown",
     props: {
@@ -17,18 +21,28 @@
         default: '# hello world'
       }
     },
+
     data(){
       return {
         mode: 'dom'
       }
     },
+
     computed: {
       getMarkdown(){
+
         if(this.mode === 'vue') {
           return marked(this.mark)
         } else {
           return ''
         }
+
+      }
+    },
+
+    updated(){
+      if(this.mode === 'vue' && this.$refs.vdom) {
+        hljs.highlightBlock(this.$refs.vdom)
       }
     },
     mounted(){
@@ -37,12 +51,18 @@
       if(!dom) {
         this.mode = 'vue'
       } else {
+
         this.$refs.dom.innerHTML = marked(dom)
+        try{
+          hljs.highlightBlock(this.$refs.dom)
+        }catch (e) {
+          //
+        }
       }
     }
   }
 </script>
 
 <style lang="scss">
-
+  @import "../../theme/markdown";
 </style>

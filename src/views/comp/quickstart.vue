@@ -1,13 +1,12 @@
 <template>
   <div>
-    <sun-markdown>
-    # a
-    # b
-    * 123
-    ```js
-    alert('asdsad')
-    ```
+    <sun-markdown :mark="mark">
     </sun-markdown>
+
+
+    <textarea name="" id="" cols="30" rows="10" v-model="mark">
+
+    </textarea>
   </div>
 </template>
 
@@ -25,6 +24,7 @@
     },
 
     mounted(){
+
     }
   }
 </script>

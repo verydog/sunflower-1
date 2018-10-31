@@ -32,7 +32,7 @@
       getMarkdown(){
 
         if(this.mode === 'vue') {
-          return marked(this.mark)
+          return marked(this.mark, { sanitize: true })
         } else {
           return ''
         }
@@ -52,7 +52,7 @@
         this.mode = 'vue'
       } else {
 
-        this.$refs.dom.innerHTML = marked(dom)
+        this.$refs.dom.innerHTML = marked(dom, { sanitize: true })
         try{
           hljs.highlightBlock(this.$refs.dom)
         }catch (e) {

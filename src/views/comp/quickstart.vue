@@ -1,8 +1,18 @@
 <template>
   <div>
-    <sun-markdown :mark="mark">
-    </sun-markdown>
 
+
+    <sun-markdown
+    :mark="`
+    # 快速上手
+
+    # 3000
+
+    \`\`\`js
+    var a = 10
+    \`\`\`
+    `">
+    </sun-markdown>
 
     <textarea name="" id="" cols="30" rows="10" v-model="mark">
 

@@ -2,16 +2,29 @@
   <div>
 
 
-    <sun-markdown
-    :mark="`
-    # 快速上手
+    <div>123456</div>
 
-    # 3000
 
-    \`\`\`js
-    var a = 10
-    \`\`\`
-    `">
+
+    <sun-markdown :mark="'123456'">
+      <script type="text/html">
+        # aaa
+        # bbb
+        # ccc
+        * 123456
+          * 456
+          * 456789
+            * 456789
+            * 123456
+
+
+
+
+
+        ```js
+        var a = 'asdasdasdsadsa';
+        ```
+      </script>
     </sun-markdown>
 
     <textarea name="" id="" cols="30" rows="10" v-model="mark">

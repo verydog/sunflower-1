@@ -21,7 +21,11 @@
         default: '# hello world'
       }
     },
+    beforeCreate(){
+      let a = document.getElementById('kkk')
 
+      console.log(a)
+    },
     data(){
       return {
         mode: 'dom'
@@ -46,13 +50,35 @@
       }
     },
     mounted(){
-      let dom = this.$refs.dom.innerHTML
+      let dom = this.$refs.dom
+      let script = dom.getElementsByTagName('script')
 
-      if(!dom) {
+      let markDownHTML = ''
+
+      if(script.length !== 0) {
+        script = script[0]
+        markDownHTML = script.innerHTML
+      }
+
+
+      let reSearchArr = markDownHTML.split('\n')
+
+      let searchedArr = reSearchArr.map((val)=>{
+
+        if(val.replace(/\s/g, '') !== '') {
+          val = val.replace(/^\s{4,4}/g, '')
+        }
+
+        return val
+      })
+
+      markDownHTML = searchedArr.join('\n')
+
+      if(!markDownHTML) {
         this.mode = 'vue'
       } else {
 
-        this.$refs.dom.innerHTML = marked(dom, { sanitize: true })
+        this.$refs.dom.innerHTML = marked(markDownHTML)
         try{
           hljs.highlightBlock(this.$refs.dom)
         }catch (e) {
@@ -65,4 +91,9 @@
 
 <style lang="scss">
   @import "../../theme/markdown";
+  .sun-markdown {
+    script{
+      display: none !important;
+    }
+  }
 </style>

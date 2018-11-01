@@ -6,7 +6,7 @@
 
 
 
-    <sun-markdown :mark="'123456'">
+    <sun-markdown>
       <script type="text/html">
         # aaa
         # bbb

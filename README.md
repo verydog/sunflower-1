@@ -15,4 +15,5 @@
 ▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 10%
 
 ## LICENSE
-MIT
+<a href="https://github.com/sunflower-ui/sunflower/blob/master/LICENSE">MIT</a>
+

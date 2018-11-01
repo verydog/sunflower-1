@@ -15,7 +15,7 @@
             <div class="nav-list-content">
               <ul>
                 <li class="item">
-                  <router-link to="components/quickstart">快速上手</router-link>
+                  <router-link to="/components/quickstart">快速上手</router-link>
                 </li>
               </ul>
             </div>

@@ -10,7 +10,7 @@
 <script>
   import marked from 'marked'
   import hljs from 'highlight.js';
-  import 'highlight.js/styles/github.css'
+  import 'highlight.js/styles/idea.css'
 
 
   export default {
@@ -20,11 +20,6 @@
         type: String,
         default: '# hello world'
       }
-    },
-    beforeCreate(){
-      let a = document.getElementById('kkk')
-
-      console.log(a)
     },
     data(){
       return {
@@ -36,7 +31,7 @@
       getMarkdown(){
 
         if(this.mode === 'vue') {
-          return marked(this.mark, { sanitize: true })
+          return marked(this.mark)
         } else {
           return ''
         }

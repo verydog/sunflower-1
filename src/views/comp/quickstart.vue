@@ -2,34 +2,26 @@
   <div>
 
 
-    <div>123456</div>
-
-
 
     <sun-markdown>
       <script type="text/html">
-        # aaa
-        # bbb
-        # ccc
-        * 123456
-          * 456
-          * 456789
-            * 456789
-            * 123456
-
-
-
-
-
-        ```js
-        var a = 'asdasdasdsadsa';
+        # 快速上手
+        `sunflower` 是一个面向于高阶需求的ui组件库，用来满足一些平常的ui组件库
+        不会提供的功能。
+        # 安装
+        ```cmd
+      npm install sunflower-ui --save
         ```
+        # 使用
+        按需引入
+        ```js
+      import { xx } from sunflower
+        ```
+
       </script>
     </sun-markdown>
 
-    <textarea name="" id="" cols="30" rows="10" v-model="mark">
 
-    </textarea>
   </div>
 </template>
 

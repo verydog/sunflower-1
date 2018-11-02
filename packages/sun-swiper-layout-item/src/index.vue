@@ -148,10 +148,7 @@
 
 <style lang="scss">
     .sun-swiper-layout-item {
-        border-bottom: 1px solid #ccc;
-        height: 50px;
-        line-height: 50px;
-
+        min-height: 50px;
         .sun-menu {
 
         }

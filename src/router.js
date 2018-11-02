@@ -18,8 +18,18 @@ export default new Router({
       children: [
         {
           path: 'quickstart',
-          name: 'components-quickstart',
+          name: 'quickstart',
           component: () => import('./views/comp/quickstart.vue')
+        },
+        {
+          path: 'swiper-layout',
+          name: 'swiper-layout',
+          component: () => import('./views/comp/swiper-layout.vue')
+        },
+        {
+          path: 'markdown',
+          name: 'markdown',
+          component: () => import('./views/comp/markdown.vue')
         }
       ]
     }

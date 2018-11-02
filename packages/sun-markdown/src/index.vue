@@ -19,6 +19,10 @@
       mark: {
         type: String,
         default: '# hello world'
+      },
+      space: {
+        type: Number,
+        default: 6
       }
     },
     data(){
@@ -39,35 +43,47 @@
       }
     },
 
+    methods: {
+      renderMarkdown(){
+
+        let dom = this.$refs.dom
+        let script = dom.getElementsByTagName('script')
+
+        let markDownHTML = ''
+
+        if(script.length !== 0) {
+          script = script[0]
+          markDownHTML = script.innerHTML
+        }
+
+        let replaceSpaceRule = new RegExp( `^\\s{${this.space},${this.space}}`, 'g' )
+
+
+        let reSearchArr = markDownHTML.split('\n')
+
+
+        let searchedArr = reSearchArr.map((val)=>{
+
+          if(val.replace(/\s/g, '') !== '') {
+            val = val.replace(replaceSpaceRule, '')
+          }
+
+          return val
+        })
+
+
+        return searchedArr.join('\n')
+      }
+    },
+
     updated(){
       if(this.mode === 'vue' && this.$refs.vdom) {
         hljs.highlightBlock(this.$refs.vdom)
       }
     },
     mounted(){
-      let dom = this.$refs.dom
-      let script = dom.getElementsByTagName('script')
 
-      let markDownHTML = ''
-
-      if(script.length !== 0) {
-        script = script[0]
-        markDownHTML = script.innerHTML
-      }
-
-
-      let reSearchArr = markDownHTML.split('\n')
-
-      let searchedArr = reSearchArr.map((val)=>{
-
-        if(val.replace(/\s/g, '') !== '') {
-          val = val.replace(/^\s{4,4}/g, '')
-        }
-
-        return val
-      })
-
-      markDownHTML = searchedArr.join('\n')
+      let markDownHTML = this.renderMarkdown()
 
       if(!markDownHTML) {
         this.mode = 'vue'

@@ -28,10 +28,15 @@
             <div class="nav-list-content">
               <ul>
                 <li class="item">
-                  <router-link to="components/quickstart">SwiperLayout 滑块列表</router-link>
+                  <router-link to="/components/swiper-layout">SwiperLayout 滑块布局</router-link>
                 </li>
+
                 <li class="item">
-                  <router-link to="components/install">IBoot 木桶布局</router-link>
+                  <router-link to="/components/markdown">Markdown 文档</router-link>
+                </li>
+
+                <li class="item">
+                  <router-link to="/components/iboot">IBoot 木桶布局</router-link>
                 </li>
               </ul>
             </div>

@@ -27,7 +27,7 @@
 <script>
 
   export default {
-    name: "quickstart",
+    name: "markdown",
     data(){
       return {
         mark: ''

@@ -1,5 +1,7 @@
 html,body,div,h1,h2,h3,h4,h5,h6,p,img,ul,li,input,span,a,i{ padding: 0;margin: 0; }
-html{ font-family: "microsoft yahei", "HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial",sans-serif; }
+html{
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif
+}
 img{ border: none; vertical-align: top;}
 a{ text-decoration: none; }
 input,textarea,button{ outline: none;-webkit-appearance: none; }
@@ -10,4 +12,6 @@ li{ list-style: none; }
 .clear:after,.clear-fix:after{ content: ""; display: block; clear: both; }
 .fl,.pull-left{ float: left; }
 .fr,.pull-right{ float: right; }
-/* mycat website public block end */
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  font-weight: 100 !important;
+}

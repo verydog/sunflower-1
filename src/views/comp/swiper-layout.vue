@@ -470,6 +470,13 @@
 
       display: flex;
 
+      .sun-swiper-layout-item {
+        background-color: #FE3C32;
+      }
+      .sun-content {
+        background-color: #fff;
+      }
+
       .view-box {
         width: 375px;
         height: 667px;

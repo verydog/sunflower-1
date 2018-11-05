@@ -114,8 +114,9 @@
     },
     mounted() {
       this.swiper.init()
-    },
 
+      console.log(this.swiper)
+    },
 
 
     watch: {
@@ -142,6 +143,12 @@
 
         }
       }
+    },
+
+
+    beforeDestroy(){
+      this.swiper.destroy(true);
+      console.log('销毁')
     }
   }
 </script>

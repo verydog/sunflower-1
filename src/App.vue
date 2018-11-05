@@ -1,18 +1,14 @@
 <template>
   <div id="app">
-    <sun-header></sun-header>
     <router-view/>
   </div>
 </template>
 
 <script>
 
-  import SunHeader from './components/sun-header'
 
   export default {
-    components: {
-      SunHeader
-    }
+    name: 'app'
   }
 </script>
 

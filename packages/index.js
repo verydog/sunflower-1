@@ -1,13 +1,15 @@
 import SunSwiperLayoutItem from './sun-swiper-layout-item'
 import SunSwiperLayout from './sun-swiper-layout'
 import SunMarkdown from './sun-markdown'
+import SunQrcode from './sun-qrcode'
 
 import DirSunMd from './directives/sun-md'
 
 const components = [
   SunSwiperLayoutItem,
   SunSwiperLayout,
-  SunMarkdown
+  SunMarkdown,
+  SunQrcode
 ]
 
 const install = function(Vue) {
@@ -27,7 +29,8 @@ export {
   version,
   SunSwiperLayoutItem,
   SunSwiperLayout,
-  SunMarkdown
+  SunMarkdown,
+  SunQrcode
 }
 
 export default {

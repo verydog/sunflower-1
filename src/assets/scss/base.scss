@@ -87,6 +87,7 @@ select.form-controller {
   .form-controller {
     margin-left: 6px;
   }
+  margin-bottom: 20px;
 }
 
 
@@ -118,19 +119,9 @@ table.mytable td {
   border-bottom: 1px solid #f1f4f8
 }
 
-table.mytable code {
-  font-size: 13px;
-  padding: 0 8px;
-  font-family: inherit;
-  word-break: keep-all
-}
-table.mytable code {
-  margin: 2px;
-  padding: 2px 7px;
-  display: inline
-}
 
-code {
+
+table.mytable code {
   display: block;
   font-size: 13px;
   overflow-x: auto;
@@ -147,7 +138,17 @@ code {
   font-family: Source Code Pro,Monaco,Inconsolata,monospace;
 }
 
-
+table.mytable code {
+  font-size: 13px;
+  padding: 0 8px;
+  font-family: inherit;
+  word-break: keep-all
+}
+table.mytable code {
+  margin: 2px;
+  padding: 2px 7px;
+  display: inline
+}
 
 .nui-scroll{
   overflow-y: auto;

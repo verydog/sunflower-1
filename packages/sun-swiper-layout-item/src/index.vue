@@ -37,7 +37,8 @@
       },
       open: {
         type: Boolean,
-        default: false
+        default: false,
+        required: true
       },
       offsetNumber: {
         type: Number,
@@ -45,7 +46,7 @@
       },
       speed:{
         type: Number,
-        default: 300
+        default: 100
       }
     },
     data() {
@@ -114,8 +115,6 @@
     },
     mounted() {
       this.swiper.init()
-
-      console.log(this.swiper)
     },
 
 
@@ -148,7 +147,6 @@
 
     beforeDestroy(){
       this.swiper.destroy(true);
-      console.log('销毁')
     }
   }
 </script>

@@ -87,6 +87,11 @@
          </div>
         </div>
 
+        <div class="item">
+          <p class="alert">扫码体验</p>
+          <sun-qrcode :text="demo1.qrText"></sun-qrcode>
+        </div>
+
       </div>
 
     </div>
@@ -404,7 +409,8 @@
           form: {
             menuWidth: '40%',
             type: 'right'
-          }
+          },
+          qrText: this.domain + '#/view/swiper-layout-view'
         }
       }
     },

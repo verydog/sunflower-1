@@ -32,6 +32,11 @@ export default new Router({
           component: () => import('./views/comp/markdown.vue')
         }
       ]
+    },
+    {
+      path: '/view/swiper-layout-view',
+      name: 'swiper-layout-view',
+      component: () => import('./views/comp/swiper-layout-view.vue')
     }
   ]
 })

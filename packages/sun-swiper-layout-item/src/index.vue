@@ -1,31 +1,28 @@
 <template>
-    <div class="sun-swiper-layout-item">
-        <swiper :options="swiperOption" ref="mySwiper">
-
-            <swiper-slide class="sun-menu sun-left-menu" :style="{ width: getMenuWidth }" v-if="type === 'left' || type === 'top'">
-                <slot name="menu"></slot>
-            </swiper-slide>
-            <swiper-slide class="sun-content">
-                <slot name="content"></slot>
-            </swiper-slide>
-            <swiper-slide class="sun-menu sun-right-menu" :style="{ width: getMenuWidth }" v-if="type === 'right' || type === 'bottom'">
-                <slot name="menu"></slot>
-            </swiper-slide>
-
-        </swiper>
+  <div class="sun-swiper-layout-item">
+    <div class="swiper-container" ref="mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide sun-menu sun-left-menu" :style="{ width: getMenuWidth }" v-if="type === 'left'">
+          <slot name="menu"></slot>
+        </div>
+        <div class="swiper-slide sun-content">
+          <slot name="content"></slot>
+        </div>
+        <div class="swiper-slide sun-menu sun-right-menu" :style="{ width: getMenuWidth }" v-if="type === 'right'">
+          <slot name="menu"></slot>
+          <div class="sun-menu-bg" :style="{ backgroundColor: menuColor }"></div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-  import 'swiper/dist/css/swiper.css'
-  import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
+  import Swiper from '../../plugin/swiper/swiper-3.4.2.min'
 
   export default {
     name: "sun-swiper-layout-item",
-    components: {
-      swiper,
-      swiperSlide
-    },
     props: {
       type: {
         type: String,
@@ -44,26 +41,29 @@
         type: Number,
         default: 120
       },
-      speed:{
+      speed: {
         type: Number,
-        default: 100
+        default: 150
+      },
+      menuColor: {
+        type: String,
+        default: '#ffffff'
       }
     },
     data() {
       return {
+        swiper: null,
         swiperOption: {
           slidesPerView: 'auto',
           initialSlide: (this.type === 'left' || this.type === 'top') ? 1 : 0,
           init: false,
-          on: {
-            transitionStart: this.slideChange,
-            touchEnd: this.touchEnd,
-            init: this.afterInit
-          },
+          onTransitionStart: this.slideChange,
+          onTouchEnd: this.touchEnd,
+          onInit: this.afterInit,
           speed: this.speed
         },
-
-        isInit: false
+        progress: 0,
+        istouch: false
       }
     },
     methods: {
@@ -72,13 +72,21 @@
       },
 
       slideChange() {
+
         if(this.swiper && this.isInit) {
 
           // # hack for swiper right bug
           if(this.type === 'right'){
 
-            this.$emit('update:open', this.swiper.isEnd)
-            this.$emit('toggle', this.swiper.isEnd)
+            if(this.progress > 0.35 && this.istouch && !this.open) {
+              this.$emit('update:open', this.swiper.isEnd = true)
+              this.$emit('toggle', this.swiper.isEnd = true)
+
+              this.istouch = false
+            } else {
+              this.$emit('update:open', this.swiper.isEnd)
+              this.$emit('toggle', this.swiper.isEnd)
+            }
 
           } else if (this.type === 'left') {
 
@@ -91,10 +99,20 @@
 
       touchEnd(){
 
-        if(this.open) {
-          let offset = Math.abs(this.swiper.touches.startX - this.swiper.touches.currentX)
 
-          if(offset > this.offsetNumber ) {
+        this.progress = this.swiper.progress
+        this.istouch = true
+
+        if(this.open) {
+
+          let offset = this.swiper.touches.startX - this.swiper.touches.currentX
+
+          if(this.type === 'right' && offset > this.offsetNumber) {
+            this.$emit('offset', {
+              type: this.type,
+              offset
+            })
+          } else if(this.type === 'left' && -offset > this.offsetNumber) {
             this.$emit('offset', {
               type: this.type,
               offset
@@ -105,16 +123,14 @@
       }
     },
     computed: {
-      swiper() {
-        return this.$refs.mySwiper.swiper
-      },
       getMenuWidth() {
         return (this.type === 'left' || this.type === 'right') ? this.menuWidth : '100%'
       },
-
     },
     mounted() {
-      this.swiper.init()
+
+      this.swiper = new Swiper (this.$refs.mySwiper, this.swiperOption)
+
     },
 
 
@@ -148,14 +164,27 @@
     beforeDestroy(){
       this.swiper.destroy(true);
     }
+
   }
 </script>
 
 <style lang="scss">
-    .sun-swiper-layout-item {
-        min-height: 50px;
-        .sun-menu {
+  @import "../../plugin/swiper/swiper-3.4.2.min.css";
+  .sun-swiper-layout-item {
+    min-height: 50px;
+    .sun-menu {
+      position: relative;
+      .sun-menu-bg {
+        content: '';
+        position: absolute;
+        width: 400%;
+        height: 100%;
+        background-color: #fff;
+        right: -400%;
+        transform: translateX(-6px);
+        top: 0;
 
-        }
+      }
     }
+  }
 </style>

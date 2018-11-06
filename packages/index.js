@@ -9,7 +9,7 @@ const components = [
   SunSwiperLayoutItem,
   SunSwiperLayout,
   SunMarkdown,
-  SunQrcode
+  SunQrcode,
 ]
 
 const install = function(Vue) {
@@ -30,7 +30,7 @@ export {
   SunSwiperLayoutItem,
   SunSwiperLayout,
   SunMarkdown,
-  SunQrcode
+  SunQrcode,
 }
 
 export default {

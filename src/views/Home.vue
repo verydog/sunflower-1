@@ -1,15 +1,7 @@
 <template>
   <div>
     <sun-header></sun-header>
-
-    <div class="home">
-      <h1 align="center">Welcome</h1>
-      <ul>
-        <li>
-          <router-link to="components">组件</router-link>
-        </li>
-      </ul>
-    </div>
+    <router-view/>
   </div>
 </template>
 

@@ -1,3 +1,4 @@
+
 <template>
   <div class="sun-markdown markdown-body">
     <div v-html="getMarkdown" v-if="mode === 'vue'" ref="vdom"></div>
@@ -10,7 +11,7 @@
 <script>
   import marked from 'marked'
   import hljs from 'highlight.js';
-  import 'highlight.js/styles/idea.css'
+  import 'highlight.js/styles/a11y-light.css'
 
 
   export default {
@@ -49,6 +50,7 @@
         let dom = this.$refs.dom
         let script = dom.getElementsByTagName('script')
 
+
         let markDownHTML = ''
 
         if(script.length !== 0) {
@@ -67,18 +69,37 @@
           if(val.replace(/\s/g, '') !== '') {
             val = val.replace(replaceSpaceRule, '')
           }
-
+          val = this.pipScript(val)
           return val
         })
 
 
         return searchedArr.join('\n')
+      },
+
+
+      pipScript(str){
+
+        // # hack for script bug
+        str = str.replace(/(\()script.*?(\))/, (a)=>{
+          return a.replace(/\(/g, '<').replace(/\)/g, '>')
+        })
+
+        str = str.replace(/(\(\/)script(\))/, (a)=>{
+          return a.replace(/\(/g, '<').replace(/\)/g, '>')
+        })
+
+        return str
       }
     },
 
     updated(){
       if(this.mode === 'vue' && this.$refs.vdom) {
-        hljs.highlightBlock(this.$refs.vdom)
+        let codes = this.$refs.vdom.querySelectorAll('pre code')
+
+        for(let i=0; i<codes.length; i++) {
+          hljs.highlightBlock(codes[i])
+        }
       }
     },
     mounted(){
@@ -91,7 +112,13 @@
 
         this.$refs.dom.innerHTML = marked(markDownHTML)
         try{
-          hljs.highlightBlock(this.$refs.dom)
+
+          let codes = this.$refs.dom.querySelectorAll('pre code')
+
+          for(let i=0; i<codes.length; i++) {
+            hljs.highlightBlock(codes[i])
+          }
+
         }catch (e) {
           //
         }

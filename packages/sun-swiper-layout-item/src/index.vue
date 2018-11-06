@@ -4,6 +4,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide sun-menu sun-left-menu" :style="{ width: getMenuWidth }" v-if="type === 'left'">
           <slot name="menu"></slot>
+          <div class="sun-menu-bg" :style="{ backgroundColor: menuColor }"></div>
         </div>
         <div class="swiper-slide sun-content">
           <slot name="content"></slot>
@@ -180,10 +181,17 @@
         width: 400%;
         height: 100%;
         background-color: #fff;
-        right: -400%;
-        transform: translateX(-6px);
         top: 0;
+      }
 
+      &.sun-left-menu .sun-menu-bg {
+        left: -400%;
+        transform: translateX(1px);
+      }
+
+      &.sun-right-menu .sun-menu-bg {
+        right: -400%;
+        transform: translateX(-1px);
       }
     }
   }

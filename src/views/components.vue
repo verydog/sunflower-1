@@ -36,6 +36,10 @@
                 </li>
 
                 <li class="item">
+                  <router-link to="/components/qrcode">Qrcode 二维码</router-link>
+                </li>
+
+                <li class="item">
                   <router-link to="/components/iboot">IBoot 木桶布局</router-link>
                 </li>
               </ul>

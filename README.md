@@ -7,12 +7,13 @@
 * SunSwiperLayout ✅
 * SunSwiperLayoutItem ✅
 * SunMarkdown ✅
+* SunQrcode ✅
 * SunBoot ⚪
 * ... (To be added)⚪
 
 ## Document progress 📕
 
-▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 10%
+▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 15%
 
 ## LICENSE
 <a href="https://github.com/sunflower-ui/sunflower/blob/master/LICENSE">MIT</a>

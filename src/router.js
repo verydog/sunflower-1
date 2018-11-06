@@ -8,28 +8,41 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import('./views/Home.vue')
-    },
-    {
-      path: '/components',
-      name: 'components',
-      component: () => import('./views/components.vue'),
-      redirect: '/components/quickstart',
-      children: [
+      component: () => import('./views/Home.vue'),
+      redirect: '/welcome',
+      children:[
         {
-          path: 'quickstart',
-          name: 'quickstart',
-          component: () => import('./views/comp/quickstart.vue')
+          path: 'welcome',
+          name: 'welcome',
+          component: () => import('./views/welcome.vue'),
         },
         {
-          path: 'swiper-layout',
-          name: 'swiper-layout',
-          component: () => import('./views/comp/swiper-layout.vue')
-        },
-        {
-          path: 'markdown',
-          name: 'markdown',
-          component: () => import('./views/comp/markdown.vue')
+          path: 'components',
+          name: 'components',
+          component: () => import('./views/components.vue'),
+          redirect: '/components/quickstart',
+          children: [
+            {
+              path: 'quickstart',
+              name: 'quickstart',
+              component: () => import('./views/comp/quickstart.vue')
+            },
+            {
+              path: 'swiper-layout',
+              name: 'swiper-layout',
+              component: () => import('./views/comp/swiper-layout.vue')
+            },
+            {
+              path: 'markdown',
+              name: 'markdown',
+              component: () => import('./views/comp/markdown.vue')
+            },
+            {
+              path: 'qrcode',
+              name: 'qrcode',
+              component: () => import('./views/comp/qrcode.vue')
+            }
+          ]
         }
       ]
     },

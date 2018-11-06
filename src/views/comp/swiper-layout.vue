@@ -3,7 +3,7 @@
 
     <sun-markdown>
       <script type="text/html">
-        # 滑块布局
+        # SwiperLayout 滑块布局
         ### 示例
       </script>
     </sun-markdown>
@@ -11,40 +11,6 @@
     <div class="demo-box demo1">
 
       <div class="view-box nui-scroll">
-        <!--
-        <sun-swiper-layout>
-          <sun-swiper-layout-item
-            v-for="(target, index) in list"
-            :open.sync="target.open"
-            :menuWidth="target.menuWidth"
-            :type="target.type"
-            :key="index"
-            @offset="demoOneOffset(index)">
-            <template slot="content">
-              <div class="content">
-                <div class="face-wrap">
-                  <div class="face" :style="{ backgroundImage: `url(${target.face})` }"></div>
-                </div>
-                <div class="des-wrap">
-                  <p class="de-name">{{target.name}}</p>
-                  <p class="des">{{target.msg}}</p>
-                </div>
-              </div>
-            </template>
-
-            <template slot="menu">
-              <div class="menu-box">
-                <div class="menu-item ding-tick" @click="close(target)">
-                  关闭
-                </div>
-                <div class="menu-item delete" @click="remove(target, index)">
-                  删除
-                </div>
-              </div>
-            </template>
-          </sun-swiper-layout-item>
-        </sun-swiper-layout>
-        -->
 
         <sun-swiper-layout>
           <sun-swiper-layout-item
@@ -53,7 +19,7 @@
             :menu-width="target.menuWidth"
             :type="target.type"
             :key="target.id"
-            :menu-color="'#FE3C32'"
+            :menu-color="target.menuColor || '#FE3C32'"
             @offset="demoOneOffset(index)">
             <template slot="content">
               <div class="content">
@@ -160,6 +126,8 @@
         }
         ```
 
+        ### 注意
+        使用 `v-for` 渲染的时候请确保 `key` 的唯一性
       </script>
     </sun-markdown>
 
@@ -226,7 +194,7 @@
             open
           </td>
           <td>
-            菜单闭合状态
+            菜单闭合状态 [required]
           </td>
           <td>
             <code>Boolean</code>
@@ -507,7 +475,8 @@
           face: 'http://wx2.sinaimg.cn/mw690/005v5x0Lly1fwtiyajyrpj30jg0jf75f.jpg',
           name: '你为啥不理我',
           msg: '听歌的人最无情',
-          open: false
+          open: false,
+          id: Math.random()
         })
       },
       demoOneRemove(){
@@ -520,7 +489,9 @@
           msg: '黄粱一梦二十年',
           open: false,
           menuWidth: this.demo1.form.menuWidth,
-          type: this.demo1.form.type
+          type: this.demo1.form.type,
+          id: Math.random(),
+          menuColor: this.demo1.form.type === 'right' ? '#FE3C32' : '#C8C7CF'
         })
       },
       demoOneOffset(index){

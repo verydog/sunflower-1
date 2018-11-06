@@ -150,24 +150,14 @@
       </thead>
       <tbody>
         <tr>
-          <td>
-            type
-          </td>
-          <td>
-            菜单位置
-          </td>
+          <td>type</td>
+          <td>菜单位置</td>
           <td>
             <code>String</code>
           </td>
-          <td>
-            left / right
-          </td>
-          <td>
-            left
-          </td>
-          <td>
-            -
-          </td>
+          <td>left / right</td>
+          <td>left</td>
+          <td>-</td>
         </tr>
         <tr>
           <td>

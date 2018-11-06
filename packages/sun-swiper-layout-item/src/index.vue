@@ -44,7 +44,7 @@
       },
       speed: {
         type: Number,
-        default: 150
+        default: 120
       },
       menuColor: {
         type: String,
@@ -61,10 +61,13 @@
           onTransitionStart: this.slideChange,
           onTouchEnd: this.touchEnd,
           onInit: this.afterInit,
-          speed: this.speed
+          speed: this.speed,
+          onTouchMove: this.touchMove,
+          onTransitionEnd: this.transitionEnd
         },
         progress: 0,
-        istouch: false
+        istouch: false,
+        ismove: false
       }
     },
     methods: {
@@ -72,10 +75,19 @@
         this.isInit = true
       },
 
+      touchMove(){
+        this.ismove = true
+      },
+
+      transitionEnd(){
+        this.ismove = false
+      },
+
       slideChange() {
 
-        if(this.swiper && this.isInit) {
+        if(this.swiper && this.isInit && this.ismove) {
 
+          this.ismove = false
           // # hack for swiper right bug
           if(this.type === 'right'){
 
@@ -103,6 +115,7 @@
 
         this.progress = this.swiper.progress
         this.istouch = true
+
 
         if(this.open) {
 

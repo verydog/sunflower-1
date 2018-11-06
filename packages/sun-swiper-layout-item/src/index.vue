@@ -63,7 +63,10 @@
           onInit: this.afterInit,
           speed: this.speed,
           onTouchMove: this.touchMove,
-          onTransitionEnd: this.transitionEnd
+          onTransitionEnd: this.transitionEnd,
+          onSlideChangeStart(){
+            console.log('sssssssssss')
+          }
         },
         progress: 0,
         istouch: false,
@@ -84,6 +87,10 @@
       },
 
       slideChange() {
+
+        console.log(
+          this.swiper , this.isInit , this.ismove
+        )
 
         if(this.swiper && this.isInit && this.ismove) {
 

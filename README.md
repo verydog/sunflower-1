@@ -13,7 +13,7 @@
 
 ## Document progress 📕
 
-▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 15%
+▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒ 35%
 
 ## LICENSE
 <a href="https://github.com/sunflower-ui/sunflower/blob/master/LICENSE">MIT</a>

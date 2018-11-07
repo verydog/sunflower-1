@@ -13,14 +13,41 @@
         npm install sunflower-ui --save
         ```
         # 使用
-        按需引入
+
+        按需引入（推荐）
         ```js
-        import { xx } from sunflower
+        import { SunMarkdown } from 'sunflower-ui'
+
+        export default {
+          data(){
+            return {
+              html: '<h1>你好鸭！</h1>'
+            }
+          },
+          components: {
+            SunMarkdown
+          }
+        }
         ```
+
+        全局引入（不推荐）
+        ```js
+        import Sunflower from 'sunflower-ui'
+
+        Vue.use(Sunflower)
+        ```
+
+        已经实现的组件列表
+
+        * `SunSwiperLayout`
+        * `SunSwiperLayoutItem`
+        * `SunMarkdown`
+        * `SunQrcode`
+
       </script>
     </sun-markdown>
 
-
+    <sun-footer></sun-footer>
   </div>
 </template>
 

@@ -58,19 +58,16 @@
           slidesPerView: 'auto',
           initialSlide: (this.type === 'left' || this.type === 'top') ? 1 : 0,
           init: false,
-          onTransitionStart: this.slideChange,
+          onTransitionStart: this.transitionStart,
           onTouchEnd: this.touchEnd,
           onInit: this.afterInit,
           speed: this.speed,
           onTouchMove: this.touchMove,
           onTransitionEnd: this.transitionEnd,
-          onSlideChangeStart(){
-            console.log('sssssssssss')
-          }
         },
         progress: 0,
-        istouch: false,
-        ismove: false
+        ismove: false,
+        isInit: 0
       }
     },
     methods: {
@@ -83,51 +80,30 @@
       },
 
       transitionEnd(){
-        this.ismove = false
-      },
 
-      slideChange() {
-
-        console.log(
-          this.swiper , this.isInit , this.ismove
-        )
-
-        if(this.swiper && this.isInit && this.ismove) {
-
+        if (this.swiper) {
           this.ismove = false
-          // # hack for swiper right bug
-          if(this.type === 'right'){
 
-            if(this.progress > 0.35 && this.istouch && !this.open) {
-              this.$emit('update:open', this.swiper.isEnd = true)
-              this.$emit('toggle', this.swiper.isEnd = true)
+          let isEnd = this.swiper.isEnd
 
-              this.istouch = false
-            } else {
-              this.$emit('update:open', this.swiper.isEnd)
-              this.$emit('toggle', this.swiper.isEnd)
-            }
-
-          } else if (this.type === 'left') {
-
-            this.$emit('update:open', this.swiper.activeIndex === 0)
-            this.$emit('toggle', !this.swiper.isEnd)
+          if(this.type === 'right') {
+            this.$emit('update:open', isEnd)
+            this.$emit('toggle', isEnd)
+          } else if (this.type === 'left'){
+            this.$emit('update:open', !isEnd)
+            this.$emit('toggle', !isEnd)
           }
 
         }
+
+
       },
 
       touchEnd(){
-
-
         this.progress = this.swiper.progress
-        this.istouch = true
-
 
         if(this.open) {
-
           let offset = this.swiper.touches.startX - this.swiper.touches.currentX
-
           if(this.type === 'right' && offset > this.offsetNumber) {
             this.$emit('offset', {
               type: this.type,
@@ -139,7 +115,14 @@
               offset
             })
           }
+        }
 
+      },
+
+      transitionStart(){
+        if(this.progress > 0.35 && !this.open && this.ismove && this.swiper && this.type === 'right') {
+          this.$emit('update:open', this.swiper.isEnd = true)
+          this.$emit('toggle', this.swiper.isEnd)
         }
       }
     },

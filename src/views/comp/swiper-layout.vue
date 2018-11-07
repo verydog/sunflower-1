@@ -445,7 +445,6 @@
     methods: {
       close(target){
         target.open = false
-        console.log('asssssssss')
       },
       remove(target, index){
         this.list.splice(index, 1)

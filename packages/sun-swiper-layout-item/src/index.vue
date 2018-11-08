@@ -20,7 +20,7 @@
 
 <script>
 
-  import Swiper from '../../plugin/swiper/swiper-3.4.2.min'
+  import Swiper from 'swiper3'
 
   export default {
     name: "sun-swiper-layout-item",
@@ -173,7 +173,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../plugin/swiper/swiper-3.4.2.min.css";
+  @import "~swiper3/swiper3.css";
   .sun-swiper-layout-item {
     min-height: 50px;
     .sun-menu {

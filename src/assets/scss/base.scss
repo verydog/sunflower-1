@@ -24,6 +24,9 @@
     transform: translateY(-50%);
   }
   margin-bottom: 6px;
+  &.warn:after {
+    background-color: #E00;
+  }
 }
 
 .plan {

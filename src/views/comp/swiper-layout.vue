@@ -127,7 +127,8 @@
         ```
 
         ### 注意
-        使用 `v-for` 渲染的时候请确保 `key` 的唯一性
+        * 使用 `v-for` 渲染的时候请确保 `key` 的唯一性
+        * `<sun-swiper-layout></sun-swiper-layout>` 仅是一个包裹容器
       </script>
     </sun-markdown>
 

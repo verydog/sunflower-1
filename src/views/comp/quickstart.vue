@@ -1,13 +1,14 @@
 <template>
   <div>
 
-
+    <div class="alert warn">目前仅为开发阶段文档，由于第一个版本的组件还未开发完成 sunflower-ui 还未发布 npm</div>
 
     <sun-markdown>
       <script type="text/html">
         # 快速上手
-        `sunflower` 是一个面向于高阶需求的ui组件库，用来满足一些平常的ui组件库
+        `sunflower` 是一个基于`Vue`面向于高阶需求的ui组件库，用来满足一些平常的ui组件库
         不会提供的功能。
+
         # 安装
         ```cmd
         npm install sunflower-ui --save
@@ -29,6 +30,15 @@
           }
         }
         ```
+        按需全局引入（推荐）
+
+
+        ```js
+        import { SunMarkdown } from 'sunflower-ui'
+
+        Vue.use(SunMarkdown)
+        ```
+
 
         全局引入（不推荐）
         ```js

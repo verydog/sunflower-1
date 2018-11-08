@@ -54,6 +54,9 @@
         以嵌套方式使用会有一些限制
         * 只能渲染一次
         * 使用script标签的时候需要用下面格式替代
+
+        ### 更换代码高亮主题
+
       </script>
     </sun-markdown>
     <div class="cmd">

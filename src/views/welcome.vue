@@ -8,7 +8,7 @@
         <div class="con-text">
           <h2>Sunflower</h2>
           <p class="des">
-            sunflower 是一个基于Vue面向于高阶需求的ui组件库，用来满足一些平常的ui组件库 不会提供的功能。
+            sunflower 是一个基于Vue面向于高阶需求的ui组件库，用来满足一些平常的ui组件库不会提供的功能。
           </p>
           <div class="btn-box">
             <a href="#/components" class="btn item">Getting Started</a>
@@ -83,6 +83,7 @@
         }
         .benan {
           margin-top: 20px;
+          text-align: right;
           a {
             color: #666;
             text-decoration: underline;

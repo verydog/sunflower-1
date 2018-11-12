@@ -10,11 +10,17 @@ export default new Router({
       name: 'home',
       component: () => import('./views/Home.vue'),
       redirect: '/welcome',
+      meta: {
+        title: 'Sunflower'
+      },
       children:[
         {
           path: 'welcome',
           name: 'welcome',
           component: () => import('./views/welcome.vue'),
+          meta: {
+            title: 'Sunflower'
+          }
         },
         {
           path: 'components',
@@ -25,22 +31,34 @@ export default new Router({
             {
               path: 'quickstart',
               name: 'quickstart',
-              component: () => import('./views/comp/quickstart.vue')
+              component: () => import('./views/comp/quickstart.vue'),
+              meta: {
+                title: '快速上手'
+              }
             },
             {
               path: 'swiper-layout',
               name: 'swiper-layout',
-              component: () => import('./views/comp/swiper-layout.vue')
+              component: () => import('./views/comp/swiper-layout.vue'),
+              meta: {
+                title: 'swiper-layout'
+              }
             },
             {
               path: 'markdown',
               name: 'markdown',
-              component: () => import('./views/comp/markdown.vue')
+              component: () => import('./views/comp/markdown.vue'),
+              meta: {
+                title: 'markdown'
+              }
             },
             {
               path: 'qrcode',
               name: 'qrcode',
-              component: () => import('./views/comp/qrcode.vue')
+              component: () => import('./views/comp/qrcode.vue'),
+              meta: {
+                title: 'qrcode'
+              }
             }
           ]
         }

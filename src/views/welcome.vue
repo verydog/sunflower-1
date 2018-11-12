@@ -49,6 +49,7 @@
       .con-text {
         flex: 1;
         padding-left: 80px;
+        padding-top: 30px;
         h2 {
           font-weight: 100;
           font-size: 100px;

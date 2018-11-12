@@ -1,11 +1,6 @@
 <template>
   <div class="sun-footer">
-    <h1>
-      文档版本：1.0.0
-    </h1>
-    <h1>
-      bug 反馈~
-    </h1>
+    <a href="#">豫备54s6d486745646</a>
   </div>
 </template>
 
@@ -19,5 +14,9 @@
   .sun-footer {
     padding-top: 40px;
     padding-bottom: 60px;
+    a {
+      color: #666;
+      text-decoration: underline;
+    }
   }
 </style>

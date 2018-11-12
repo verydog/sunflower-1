@@ -5,7 +5,8 @@
         <div class="left-nav nui-scroll small">
 
           <div class="sponsors">
-            <h1>sponsors</h1>
+            <img src="../assets/img/37d3d539b6003af38ef741d4352ac65c1038b631.jpg" alt="">
+            <p class="ver">v1.0.0</p>
           </div>
 
           <div class="nav-controller">
@@ -72,7 +73,10 @@ export default {
   $topPadding: 80px;
 
   .page-component {
-
+    .ver {
+      color: #666;
+      margin-top: 6px;
+    }
 
     .nav-controller {
       .nav-list-title {
@@ -106,7 +110,7 @@ export default {
     }
 
     .content-box {
-      padding-left: $leftPadding;
+      padding-left: $leftPadding + 20px;
     }
     .left-nav {
       width: $leftPadding;
@@ -124,7 +128,7 @@ export default {
     .sponsors {
       padding: 10px 0;
       img {
-        width: 100%;
+        width: 80%;
       }
     }
   }

@@ -204,3 +204,38 @@ html::-webkit-scrollbar-track:hover {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.4);
   background-color: rgba(0,0,0,.01);
 }
+
+
+
+.loading-bar {
+  position: absolute;
+  z-index: 90000;
+  width: 100%;
+  height: 2px;
+  left: 0px;
+  top: 0px;
+  span.press {
+    display: block;
+    float: left;
+    width: 0%;
+    height: 100%;
+    background-color: #FFCB30;
+    transition: all 0.4s cubic-bezier(.55,0,.1,1);
+  }
+  &.loading span.press{
+    width: 10%;
+    opacity: 1;
+  }
+  &.end span.press {
+    width: 100%;
+    opacity: 1;
+  }
+  &.hide span.press {
+    opacity: 0;
+    width: 100%;
+  }
+  &.normal span.press {
+    opacity: 0;
+    width: 0%;
+  }
+}

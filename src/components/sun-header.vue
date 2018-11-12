@@ -15,9 +15,6 @@
 
       <div class="fr right-box">
         <div class="item">
-          1.0.0
-        </div>
-        <div class="item">
           <a href="https://github.com/sunflower-ui/sunflower" target="_blank">
             <img src="../assets/img/github.png" alt="">
           </a>
@@ -69,9 +66,9 @@ export default {
     }
 
     .logo img {
-      width: 70px;
-      height: 70px;
-      padding-top: 5px;
+      width: 40px;
+      height: 40px;
+      padding-top: 20px;
     }
     .logo-text {
       line-height: 80px;

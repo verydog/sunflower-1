@@ -11,13 +11,17 @@
             sunflower 是一个基于Vue面向于高阶需求的ui组件库，用来满足一些平常的ui组件库 不会提供的功能。
           </p>
           <div class="btn-box">
-            <a href="#/components" class="btn item">从这里开始</a>
+            <a href="#/components" class="btn item">Getting Started</a>
 
             <a href="https://github.com/sunflower-ui/sunflower" target="_blank" class="item github-link">
               <img src="../assets/img/github.png" alt="">
             </a>
 
             <iframe class="github-icon item" src="https://ghbtns.com/github-btn.html?user=sunflower-ui&repo=sunflower&type=star&count=true&size=large"></iframe>
+          </div>
+
+          <div class="benan">
+            <a href="#">豫备54s6d486745646</a>
           </div>
         </div>
       </div>
@@ -75,6 +79,13 @@
           }
           .btn.item {
             margin-right: 60px;
+          }
+        }
+        .benan {
+          margin-top: 20px;
+          a {
+            color: #666;
+            text-decoration: underline;
           }
         }
       }

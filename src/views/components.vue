@@ -33,7 +33,7 @@
                   <router-link to="/components/swiper-layout">SwiperLayout 滑块布局</router-link>
                 </li>
 
-                <li class="item">
+                <li class="item" style="display: none">
                   <router-link to="/components/swiper">Swiper 轮播</router-link>
                 </li>
 

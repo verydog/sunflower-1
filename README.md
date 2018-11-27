@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img src="https://i.loli.net/2018/11/07/5be2a200f393a.png" width="300px" alt="banner.png" title="banner.png" />
+    <img src="https://i.loli.net/2018/11/07/5be2a200f393a.png" width="300px" height="auto" alt="banner.png" title="banner.png" />
 </p>  
 
 # sunflower 🌼

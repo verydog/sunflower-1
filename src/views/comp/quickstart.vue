@@ -13,6 +13,13 @@
         ```cmd
         npm install sunflower-ui --save
         ```
+        你还需要安装 `sass-loader` & `node-sass`
+
+        ```cmd
+        npm install --save-dev sass-loader
+        npm install --save-dev node-sass
+        ```
+
         # 使用
 
         按需引入（推荐）

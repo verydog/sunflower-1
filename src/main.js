@@ -21,7 +21,7 @@ router.beforeEach((to, from, next)=>{
 
 })
 
-router.afterEach((to, from, next)=>{
+router.afterEach(()=>{
   store.commit('nowStatus', 'end')
 
   setTimeout(()=>{
@@ -31,6 +31,8 @@ router.afterEach((to, from, next)=>{
   setTimeout(()=>{
     store.commit('nowStatus', 'normal')
   }, 1000)
+
+  document.documentElement.scrollTop = document.body.scrollTop = 0
 
 })
 

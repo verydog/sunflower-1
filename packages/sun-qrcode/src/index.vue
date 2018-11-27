@@ -49,7 +49,7 @@
             light: this.light
           }
         }, function (error) {
-          if (error) console.error(error)
+          throw error
         })
       }
     },

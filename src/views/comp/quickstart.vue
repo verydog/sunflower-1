@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="alert warn">目前仅为开发阶段文档，由于第一个版本的组件还未开发完成 sunflower-ui 还未发布 npm</div>
+    <div class="alert warn" style="display: none"></div>
 
     <sun-markdown>
       <script type="text/html">

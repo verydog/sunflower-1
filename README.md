@@ -5,20 +5,18 @@
 
 # sunflower 🌼
 
-【开发中】vue 2.0 高阶需求ui组件库.
+】vue 2.0 高阶需求ui组件库.
 
-## Development progress 🤪
+## 组件列表
 
-* SunSwiperLayout ✅
-* SunSwiperLayoutItem ✅
-* SunMarkdown ✅
-* SunQrcode ✅
-* SunBoot ⚪
-* ... (To be added)⚪
+* SunSwiperLayout 
+* SunSwiperLayoutItem 
+* SunMarkdown 
+* SunQrcode 
 
-## Document progress 📕
+## 文档
 
-▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒ 35%
+https://verydog.cn/#/components/swiper-layout
 
 ## LICENSE
 <a href="https://github.com/sunflower-ui/sunflower/blob/master/LICENSE">MIT</a>

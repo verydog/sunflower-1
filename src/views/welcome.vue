@@ -21,7 +21,7 @@
           </div>
 
           <div class="benan">
-            <a href="#">豫备54s6d486745646</a>
+            <a href="http://www.miitbeian.gov.cn" target="_blank">豫ICP备18041590号-1</a>
           </div>
         </div>
       </div>

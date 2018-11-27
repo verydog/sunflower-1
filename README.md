@@ -3,10 +3,6 @@
     <img src="https://i.loli.net/2018/11/07/5be2a200f393a.png" alt="banner.png" title="banner.png" />
 </p>  
 
-# sunflower 🌼
-
-vue 2.0 高阶需求ui组件库.
-
 
 # 快速上手
 `sunflower` 是一个基于`Vue`面向于高阶需求的ui组件库，用来满足一些平常的ui组件库

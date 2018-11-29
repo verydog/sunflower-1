@@ -63,7 +63,7 @@ Vue.use(Sunflower)
 
 ## 文档
 
-https://verydog.cn/#/components/swiper-layout
+https://verydog.cn/
 
 ## LICENSE
 <a href="https://github.com/sunflower-ui/sunflower/blob/master/LICENSE">MIT</a>

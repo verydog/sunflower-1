@@ -60,11 +60,13 @@ Vue.use(Sunflower)
 * `SunMarkdown`
 * `SunQrcode`
 
+# 未来规划
+现在的`sunflower-ui`组件数量还不多，以后会慢慢拓展，如果你有需求或者想吐槽或者想一块开发，欢迎提`issues` 和 `pr`。
 
-## 文档
+# 文档
 
 https://verydog.cn/
 
-## LICENSE
+# LICENSE
 <a href="https://github.com/sunflower-ui/sunflower/blob/master/LICENSE">MIT</a>
 

@@ -48,8 +48,6 @@
             dark: this.dark,
             light: this.light
           }
-        }, function (error) {
-          throw error
         })
       }
     },

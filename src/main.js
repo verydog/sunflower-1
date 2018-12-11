@@ -10,7 +10,6 @@ Vue.use(Sunflower)
 Vue.component(SunFooter.name, SunFooter)
 
 Vue.prototype.domain = 'https://www.verydog.cn'
-
 router.beforeEach((to, from, next)=>{
 
   store.commit('nowStatus', 'loading')

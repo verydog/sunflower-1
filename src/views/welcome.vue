@@ -23,6 +23,9 @@
           <div class="benan">
             <a href="http://www.miitbeian.gov.cn" target="_blank">豫ICP备18041590号-1</a>
           </div>
+          <div class="benan">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010202002697">豫公网安备 41010202002697号</a>
+          </div>
         </div>
       </div>
     </div>

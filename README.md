@@ -10,7 +10,8 @@
 `sunflower` 是一个基于`Vue`面向于高阶需求的ui组件库的解决方案，用来满足一些平常的ui组件库
 不会提供的高阶功能。    
 
-* 例swiper-layout组件
+* 例swiper-layout组件 
+
 ![](https://user-gold-cdn.xitu.io/2019/1/19/168640915b8f450a?w=600&h=402&f=gif&s=283811)
 
 # 安装
